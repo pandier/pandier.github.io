@@ -1,15 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+import { motion } from 'framer-motion'
 ---
 
 <Layout title="Panda885">
     <main class="full-size">
-        <h1>Panda885</h1>
-        <h2>Coming soon</h2>
+        <motion.div
+            client:idle
+            className="content"
+            initial={{
+                opacity: 0,
+                y: 20
+            }}
+            animate={{
+                opacity: 1,
+                y: 0
+            }}
+            transition={{
+                ease: "easeOut",
+                duration: 1
+            }}>
+
+            <h1>Panda885</h1>
+            <h2>Coming soon</h2>
+        </motion.div>
     </main>
 </Layout>
 
 <style>
+    .content {
+        text-align: center;
+    }
+
     main {
         display: flex;
 
