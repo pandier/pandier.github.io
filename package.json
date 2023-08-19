@@ -9,10 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^1.1.0",
-    "@fontsource/roboto": "^4.5.8",
-    "astro": "^2.3.1",
-    "framer-motion": "^7.2.1",
+    "@astrojs/react": "^2.3.2",
+    "@fontsource/roboto": "^5.0.8",
+    "astro": "^2.10.12",
+    "framer-motion": "^10.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
