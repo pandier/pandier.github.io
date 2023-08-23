@@ -1,36 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-import { motion } from 'framer-motion'
 ---
 
 <Layout title="Panda885">
     <main class="full-size">
-        <motion.div
-            client:idle
-            className="content"
-            initial={{
-                opacity: 0,
-                y: 20
-            }}
-            animate={{
-                opacity: 1,
-                y: 0
-            }}
-            transition={{
-                ease: "easeOut",
-                duration: 1
-            }}>
-
+        <div class="content fade-in">
             <h1>Panda885</h1>
             <h2>Coming soon</h2>
-        </motion.div>
+        </div>
     </main>
 </Layout>
 
 <style>
     .content {
         text-align: center;
+    }
+
+    .fade-in {
+        transform: translateY(20px);
+        opacity: 0;
     }
 
     main {
@@ -49,3 +37,17 @@ import { motion } from 'framer-motion'
         color: hsla(var(--color-text), 0.5);
     }
 </style>
+
+<script>
+    import anime from 'animejs'
+    
+    window.addEventListener('load', () => {
+        anime({
+            targets: '.fade-in',
+            easing: 'easeOutQuart',
+            translateY: [20, 0],
+            opacity: [0, 1],
+            delay: anime.stagger(200)
+        })
+    })
+</script>
