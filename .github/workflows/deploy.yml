@@ -18,7 +18,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Wait for tests to succeed
-        uses: lewagon/wait-on-check-action@v1.1.2
+        uses: lewagon/wait-on-check-action@v1.3.1
         with:
           ref: main
           repo-token: ${{ secrets.GITHUB_TOKEN }}
