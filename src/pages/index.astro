@@ -1,9 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+import CurveLeft from '../components/curve/CurveLeft.astro';
+import CurveRight from '../components/curve/CurveRight.astro';
 ---
 
 <Layout title="Pandier">
     <main class="full-size">
+        <CurveLeft />
+        <CurveRight />
         <div class="content">
             <h1 class="fade-in">Pandier</h1>
             <h2 class="fade-in chip">Developer</h2>
@@ -18,6 +23,18 @@ import Layout from '../layouts/Layout.astro';
         justify-content: center;
         align-items: center;
         gap: 1rem;
+    }
+
+    .curve-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .curve-right {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     .fade-in {
