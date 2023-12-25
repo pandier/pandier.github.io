@@ -6,10 +6,11 @@ import CurveRight from '../components/curve/CurveRight.astro';
 ---
 
 <Layout title="Pandier">
-    <main class="full-size">
+    <main class="content">
         <CurveLeft />
         <CurveRight />
-        <div class="content">
+
+        <div class="title">
             <h1 class="fade-in">Pandier</h1>
             <h2 class="fade-in chip">Developer</h2>
         </div>
@@ -18,6 +19,17 @@ import CurveRight from '../components/curve/CurveRight.astro';
 
 <style>
     .content {
+        height: 800px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--color-brand);
+    }
+
+    .title {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -30,20 +42,12 @@ import CurveRight from '../components/curve/CurveRight.astro';
         opacity: 0;
     }
 
-    main {
-        display: flex;
-
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
     .chip {
         display: block;
         width: fit-content;
         padding-inline: .5em;
         border-radius: .3em;
-        color: var(--color-background);
+        color: var(--color-brand);
         background-color: var(--color-text);
         box-shadow: .25em .25em 0 var(--color-shadow);
     }
