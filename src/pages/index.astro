@@ -25,18 +25,6 @@ import CurveRight from '../components/curve/CurveRight.astro';
         gap: 1rem;
     }
 
-    .curve-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .curve-right {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
     .fade-in {
         transform: translateY(20px);
         opacity: 0;
@@ -55,9 +43,9 @@ import CurveRight from '../components/curve/CurveRight.astro';
         width: fit-content;
         padding-inline: .5em;
         border-radius: .3em;
-        color: hsl(var(--color-background));
-        background-color: hsl(var(--color-text));
-        box-shadow: .25em .25em 0 hsla(var(--color-text), 0.25);
+        color: var(--color-background);
+        background-color: var(--color-text);
+        box-shadow: .25em .25em 0 var(--color-shadow);
     }
 </style>
 
