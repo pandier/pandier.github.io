@@ -12,9 +12,9 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
             <CurveLeft />
             <CurveRight />
 
-            <div class="title">
+            <div class="landing-title">
                 <h1 class="fade-in">Pandier</h1>
-                <h2 class="fade-in chip">Developer</h2>
+                <h2 class="landing-title-chip fade-in">Developer</h2>
             </div>
         </section>
 
@@ -37,6 +37,11 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
         align-items: center;
     }
 
+    .fade-in {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
     .landing {
         height: 50rem;
         width: 100%;
@@ -47,36 +52,34 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
         justify-content: center;
 
         background-color: var(--color-brand);
-    }
 
-    .title {
-        padding-top: 8rem;
+        .landing-title {
+            padding-top: 8rem;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
 
-    .fade-in {
-        transform: translateY(20px);
-        opacity: 0;
-    }
+            .landing-title-chip {
+                display: block;
 
-    .chip {
-        display: block;
-        width: fit-content;
-        padding-inline: .5em;
-        border-radius: .3em;
-        color: var(--color-brand);
-        background-color: var(--color-text);
-        box-shadow: .25em .25em 0 var(--color-shadow);
+                width: fit-content;
+                padding-inline: .5em;
+
+                border-radius: .3em;
+
+                color: var(--color-brand);
+                background-color: var(--color-text);
+
+                box-shadow: .25em .25em 0 var(--color-shadow);
+            }
+        }
     }
 
     .introduction {
         max-width: 80rem;
-
         padding: 12rem 4rem;
 
         display: flex;
