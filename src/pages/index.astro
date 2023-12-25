@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 import CurveLeft from '../components/curve/CurveLeft.astro';
 import CurveRight from '../components/curve/CurveRight.astro';
+import CurveDivider from '../components/curve/CurveDivider.astro';
 ---
 
 <Layout title="Pandier">
@@ -15,6 +16,7 @@ import CurveRight from '../components/curve/CurveRight.astro';
             <h2 class="fade-in chip">Developer</h2>
         </div>
     </main>
+    <CurveDivider />
 </Layout>
 
 <style>
@@ -30,6 +32,8 @@ import CurveRight from '../components/curve/CurveRight.astro';
     }
 
     .title {
+        padding-top: 150px;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
