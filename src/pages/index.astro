@@ -7,20 +7,23 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
 ---
 
 <Layout title="Pandier">
-    <main class="content">
-        <CurveLeft />
-        <CurveRight />
+    <main>
+        <section class="landing">
+            <CurveLeft />
+            <CurveRight />
 
-        <div class="title">
-            <h1 class="fade-in">Pandier</h1>
-            <h2 class="fade-in chip">Developer</h2>
-        </div>
+            <div class="title">
+                <h1 class="fade-in">Pandier</h1>
+                <h2 class="fade-in chip">Developer</h2>
+            </div>
+        </section>
+
+        <CurveDivider />
     </main>
-    <CurveDivider />
 </Layout>
 
 <style>
-    .content {
+    .landing {
         height: 800px;
 
         display: flex;
