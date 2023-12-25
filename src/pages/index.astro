@@ -7,7 +7,7 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
 ---
 
 <Layout title="Pandier">
-    <main>
+    <main class="main">
         <section class="landing">
             <CurveLeft />
             <CurveRight />
@@ -19,10 +19,24 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
         </section>
 
         <CurveDivider />
+
+        <section class="introduction">
+            <h1>Hey there!</h1>
+            <h2 class="introduction-content">
+                I'm Pandier! A self taught developer with a wide range of interests
+                including game development, graphic design and server management.
+            </h2>
+        </section>
     </main>
 </Layout>
 
-<style>
+<style lang="scss">
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .landing {
         height: 50rem;
         width: 100%;
@@ -58,6 +72,24 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
         color: var(--color-brand);
         background-color: var(--color-text);
         box-shadow: .25em .25em 0 var(--color-shadow);
+    }
+
+    .introduction {
+        max-width: 80rem;
+
+        padding: 12rem 4rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .introduction-content {
+            color: var(--color-description);
+
+            font-weight: 400;
+            text-align: center;
+        }
     }
 </style>
 
