@@ -8,21 +8,21 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
 
 <Layout title="Pandier">
     <main class="main">
-        <section class="landing">
+        <section class="landing fade-animation">
             <CurveLeft />
             <CurveRight />
 
             <div class="landing-title">
-                <h1 class="fade-in">Pandier</h1>
-                <h2 class="landing-title-chip fade-in">Developer</h2>
+                <h1 class="fade-animate">Pandier</h1>
+                <h2 class="landing-title-chip fade-animate">Developer</h2>
             </div>
         </section>
 
         <CurveDivider />
 
-        <section class="introduction">
-            <h1>Hey there!</h1>
-            <h2 class="introduction-content">
+        <section class="introduction fade-animation">
+            <h1 class="fade-animate">Hey there!</h1>
+            <h2 class="introduction-content fade-animate">
                 I'm Pandier! A self taught developer with a wide range of interests
                 including game development, graphic design and server management.
             </h2>
@@ -53,8 +53,7 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
         align-items: center;
     }
 
-    .fade-in {
-        transform: translateY(20px);
+    .fade-animate {
         opacity: 0;
     }
 
@@ -144,13 +143,21 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
 <script>
     import anime from 'animejs'
     
-    window.addEventListener('load', () => {
-        anime({
-            targets: '.fade-in',
-            easing: 'easeOutQuart',
-            translateY: [20, 0],
-            opacity: [0, 1],
-            delay: anime.stagger(200)
+    const observer = new IntersectionObserver((entries, _) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.hasAttribute('fade-animate-triggered')) {
+                entry.target.setAttribute('fade-animate-triggered', '')
+                anime({
+                    targets: entry.target.querySelectorAll('.fade-animate'),
+                    direction: entry.isIntersecting ? 'normal' : 'reverse',
+                    easing: 'easeOutQuart',
+                    translateY: [20, 0],
+                    opacity: [0, 1],
+                    delay: anime.stagger(200)
+                })
+            }
         })
-    })
+    }, { threshold: 0.6 })
+    
+    document.querySelectorAll(".fade-animation").forEach(element => observer.observe(element))
 </script>
