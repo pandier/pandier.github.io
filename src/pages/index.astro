@@ -145,8 +145,8 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
     
     const observer = new IntersectionObserver((entries, _) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.hasAttribute('fade-animate-triggered')) {
-                entry.target.setAttribute('fade-animate-triggered', '')
+            if (entry.isIntersecting && !entry.target.hasAttribute('fade-animation-triggered')) {
+                entry.target.setAttribute('fade-animation-triggered', '')
                 anime({
                     targets: entry.target.querySelectorAll('.fade-animate'),
                     direction: entry.isIntersecting ? 'normal' : 'reverse',
