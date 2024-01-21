@@ -1,17 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import CurveLeft from '../components/curve/CurveLeft.astro';
-import CurveRight from '../components/curve/CurveRight.astro';
 import CurveDivider from '../components/curve/CurveDivider.astro';
 ---
 
 <Layout title="Pandier">
     <main class="main">
         <section class="landing fade-animation">
-            <CurveLeft />
-            <CurveRight />
-
             <div class="landing-title">
                 <h1 class="fade-animate">Pandier</h1>
                 <h2 class="landing-title-chip fade-animate">Developer</h2>
@@ -58,7 +53,7 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
     }
 
     .landing {
-        height: 50rem;
+        height: 46rem;
         width: 100%;
 
         display: flex;
@@ -69,7 +64,7 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
         background-color: var(--color-brand);
 
         .landing-title {
-            padding-top: 8rem;
+            padding-top: 6rem;
 
             display: flex;
             flex-direction: column;
