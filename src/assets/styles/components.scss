@@ -1,4 +1,9 @@
 
+.content {
+    max-width: 80rem;
+    width: 100%;
+}
+
 a {
     color: var(--color-text);
     text-decoration: none;
@@ -7,10 +12,13 @@ a {
 h1, h2 {
     margin: 0;
     padding: 0;
+
+    font-weight: 600;
+    line-height: 1.2em;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 3.6rem;
 }
 
 h2 {

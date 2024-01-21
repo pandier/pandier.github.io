@@ -1,0 +1,51 @@
+---
+import Logo from "./assets/Logo.astro";
+---
+
+<div class="navbar">
+    <div class="content navbar-content">
+        <div class="navbar-brand">
+            <Logo />
+            Pandier
+        </div>
+        <div class="navbar-links">
+            <div class="navbar-link">About</div>
+            <div class="navbar-link">Contact</div>
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    .navbar {
+        height: 8rem;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        .navbar-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .navbar-brand {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                font-weight: 600;
+                font-size: 2rem;
+                letter-spacing: -0.05em;
+
+                color: var(--color-secondary);
+            }
+
+            .navbar-links {
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+            }
+        }
+    }
+</style>

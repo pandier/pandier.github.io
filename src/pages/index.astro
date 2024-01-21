@@ -1,15 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import CurveDivider from '../components/curve/CurveDivider.astro';
+import CurveDivider from '../components/assets/curve/CurveDivider.astro';
+import Navbar from '../components/Navbar.astro';
 ---
 
 <Layout title="Pandier">
     <main class="main">
-        <section class="landing fade-animation">
-            <div class="landing-title">
-                <h1 class="fade-animate">Pandier</h1>
-                <h2 class="landing-title-chip fade-animate">Developer</h2>
+        <section class="landing">
+            <Navbar />
+            <div class="content landing-content fade-animation">
+                <div class="landing-title fade-animate">
+                    <h1>
+                        A self-taught<br>developer with<br>wide range of interests
+                    </h1>
+                </div>
             </div>
         </section>
 
@@ -24,18 +29,20 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
         </section>
 
         <section class="footer">
-            <div class="footer-copyright">&copy; Pandier</div>
-            <div class="footer-socials">
-                <a class="footer-social" href="https://github.com/pandier">
-                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                    </svg>
-                </a>
-                <a class="footer-social" href="https://x.com/pandieeer">
-                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-                    </svg>
-                </a>
+            <div class="content footer-content">
+                <div class="footer-copyright">&copy; Pandier</div>
+                <div class="footer-socials">
+                    <a class="footer-social" href="https://github.com/pandier">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                    </a>
+                    <a class="footer-social" href="https://x.com/pandieeer">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -53,35 +60,19 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
     }
 
     .landing {
-        height: 46rem;
         width: 100%;
 
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
 
         background-color: var(--color-brand);
 
-        .landing-title {
-            padding-top: 6rem;
+        .landing-content {
+            padding: 12rem 0rem 14rem 0rem;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-
-            .landing-title-chip {
-                display: block;
-
-                width: fit-content;
-                padding-inline: .5em;
-
-                border-radius: .3em;
-
-                color: var(--color-brand);
-                background-color: var(--color-text);
+            .landing-title {
+                width: 50rem;
             }
         }
     }
@@ -105,29 +96,34 @@ import CurveDivider from '../components/curve/CurveDivider.astro';
 
     .footer {
         width: 100%;
-        padding: 2rem 20rem;
+        padding: 2rem 0rem;
 
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
 
         background-color: var(--color-footer);
 
-        .footer-copyright {
-            font-size: 1.2rem;
-            font-weight: 500;
-        }
-
-        .footer-socials {
+        .footer-content {
             display: flex;
             flex-direction: row;
-            gap: .5em;
+            justify-content: space-between;
+            align-items: center;
 
-            .footer-social {
+            .footer-copyright {
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+
+            .footer-socials {
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                flex-direction: row;
+                gap: .5em;
+
+                .footer-social {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
         }
     }
