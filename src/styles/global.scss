@@ -3,6 +3,8 @@
 :root {
     --color-background: #1c1919;
     --color-text: #ffffff;
+    --color-text-secondary: #adacac;
+    --color-surface: #332f2f;
 
     --font-normal: Poppins, Inter, Arial, system-ui, sans-serif;
 }
@@ -27,6 +29,7 @@
 }
 
 .content {
+    padding-inline: 1.75rem;
     max-width: 1200px;
     width: 100%;
 }
