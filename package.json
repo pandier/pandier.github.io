@@ -9,11 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/poppins": "^5.0.8",
-    "animejs": "^3.2.1",
-    "astro": "^4.0.7"
+    "@fontsource/poppins": "^5.1.0",
+    "animejs": "^3.2.2",
+    "astro": "^4.16.18"
   },
   "devDependencies": {
-    "@types/animejs": "^3.1.7"
+    "@types/animejs": "^3.1.12"
   }
 }
