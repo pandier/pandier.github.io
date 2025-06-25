@@ -1,4 +1,4 @@
-# panda885.github.io
+# pandier.github.io
 
 A personal website made with [🚀 Astro](https://astro.build/). This repository is also used for learning purposes.
 
