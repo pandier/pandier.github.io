@@ -45,15 +45,14 @@ import Layout from '../layouts/Layout.astro';
 </style>
 
 <script>
-    import anime from 'animejs'
+    import { animate, stagger } from 'animejs'
     
     window.addEventListener('load', () => {
-        anime({
-            targets: '.fade-in',
-            easing: 'easeOutQuart',
+        animate('.fade-in', {
             translateY: [20, 0],
             opacity: [0, 1],
-            delay: anime.stagger(200)
+            ease: 'outQuad',
+            delay: stagger(200)
         })
     })
 </script>
